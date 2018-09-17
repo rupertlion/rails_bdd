@@ -5,9 +5,9 @@ Feature: List articles on the landing page
 
   Scenario: View list of articles on the landing page
     Given the following article exists 
-      | title                 | content                           |
-      | A breaking news item  | Some really breaking action       |
-      | Learn Rails 5         | Build awesome rails applications  |
+      | title                 | content                           | id            |
+      | A breaking news item  | Some really breaking action       | 1             |
+      | Learn Rails 5         | Build awesome rails applications  | 2             |
     When I visit the site
     Then I should see "A breaking news item"
     And I should see "Some really breaking action"

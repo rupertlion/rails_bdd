@@ -14,8 +14,9 @@ And("I click on {string} button") do |button|
     click_on button
 end
 
-Then("I should be on {string} page") do |article|
-    expect(page).to have_content article
+Then("I should be on {string} page") do |title|
+    article = Article.find_by title: title
+    expect(current_path).to eq article_path(article)
 end
 
 When("I click {string} button") do |button|

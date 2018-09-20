@@ -16,9 +16,13 @@ end
 
 Then("I should be on {string} page") do |title|
     article = Article.find_by title: title
-    expect(current_path).to eq articles_path(article)
+    expect(page.current_path).to eq article_path(article)
 end
 
 When("I click {string} button") do |button|
     click_on button
+end
+
+When("show me the page") do
+    save_and_open_page
 end

@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <h2>New Article Form</h2>
 
-<form>
-  Title:<br>
-  <input type="text" name="title">
-  <br>
-  Content:<br>
-  <input type="text" name="content">
-  <br><br>
-  <input type="submit" value="Create Article">
-</form> 
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
 
-</body>
-</html>
+<% end %>

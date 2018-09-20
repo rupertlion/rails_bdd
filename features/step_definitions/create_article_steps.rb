@@ -14,14 +14,10 @@ And("I click on {string} button") do |button|
     click_on button
 end
 
-Then("I should be on {string} page") do |page|
-    expect(page).to eq article_path
+Then("I should be on {string} page") do |article|
+    expect(page).to have_content article
 end
 
-Given("I visit the {string} page") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-end
-  
-When("I click {string} link") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+When("I click {string} button") do |button|
+    click_on button
 end

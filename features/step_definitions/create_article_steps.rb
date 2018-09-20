@@ -16,7 +16,7 @@ end
 
 Then("I should be on {string} page") do |title|
     article = Article.find_by title: title
-    expect(current_path).to eq article_path(article)
+    expect(current_path).to eq articles_path(article)
 end
 
 When("I click {string} button") do |button|

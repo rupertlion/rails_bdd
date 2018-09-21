@@ -8,11 +8,12 @@ Feature: Edit articles
         Given the following article exists
             | title            | content                                |      
             | Learning Rails 5 | Excited about learning a new framework | 
-        And I visit the "Learning Rails 5" page
+        And I visit the landing page
 
     Scenario: Successfully edit an article
         When I click "Edit Article" button
         And I fill in "Title" with "Now learning rails 6"
+        And show me the page
         And I click "Update Article" button
         Then I should be on "Learning Rails 6" page
         And I should see "Article was successfully edited."

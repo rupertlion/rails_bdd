@@ -1,6 +1,6 @@
 <h2>Edit Article Form</h2>
 
-<%= form_with model: @article, url: articles_path, local: true do |form| %>
+<%= form_with model: @article, url: article_path, local: true do |form| %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -10,7 +10,7 @@
     <%= form.label :content %><br>
     <%= form.text_area :content %>
   </p>
- 
+
   <p>
     <%= form.submit %>
   </p>

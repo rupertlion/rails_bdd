@@ -12,10 +12,10 @@ Feature: Edit articles
 
     Scenario: Successfully edit an article
         When I click "Edit Article" button
-        And I fill in "Title" with "Now learning rails 6"
         And show me the page
+        And I fill in "Title" with "Now learning rails 6"
         And I click "Update Article" button
-        Then I should be on "Learning Rails 6" page
-        And I should see "Article was successfully edited."
-        And I should see "Learning Rails 6"
+       
+        And I should see "Article was successfully updated."
+        And I should see "Now learning rails 6"
         And I should see "Excited about learning a new framework"

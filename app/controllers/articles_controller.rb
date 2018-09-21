@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
       redirect_to @article
       flash[:notice] = "Article was successfully created."
     else
+      flash[:notice] = "Please fill in the form."
       render :new
     end  
   

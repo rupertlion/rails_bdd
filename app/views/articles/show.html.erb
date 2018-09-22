@@ -1,2 +1,29 @@
 <p><%= @article.title %></p>
 <p><%= @article.content %></p>
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+    <p>
+        <strong>Comment:</strong>
+        <%= comment.views %>
+    </p>
+    <p>
+        <strong>Email:</strong>
+        <%= comment.email %>
+    </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+    <p>
+        <%= form.label :views %><br>
+        <%= form.text_area :views %>
+    </p>
+    <p>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

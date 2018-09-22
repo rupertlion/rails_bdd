@@ -13,8 +13,8 @@ Feature: Article comments
 
     Scenario: Comment successfully applied to article with corresponding email (happy path)
 
-        When I fill in "Comment" with "Love this piece"
-        And I fill in "Email" with "goodstuff@gmail.com"
+        When I fill in "body" with "Love this piece"
+        And I fill in "email" with "goodstuff@gmail.com"
         And I click "Create Comment" button 
         And I should see "Love this piece"
         And I should see "goodstuff@gmail.com"

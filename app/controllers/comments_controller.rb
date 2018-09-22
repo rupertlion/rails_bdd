@@ -1,10 +1,19 @@
 class CommentsController < ApplicationController
     def create
+
         @article = Article.find(params[:article_id])
         @comment = @article.comments.create(comment_params)
-        redirect_to article_path(@article)
+        
+        if @comment.save
+            redirect_to article_path(@article)
+            flash[:notice] = "Comment was successfully created."
+        else
+            flash[:notice] = "Please fill in the form."
+            render :new
+        end  
     end
-     
+    
+
     private
     def comment_params
         params.require(:comment).permit(:commenter, :body)

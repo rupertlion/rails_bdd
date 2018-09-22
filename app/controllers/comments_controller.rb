@@ -8,12 +8,11 @@ class CommentsController < ApplicationController
             redirect_to article_path(@article)
             flash[:notice] = "Comment was successfully created."
         else
-            flash[:notice] = "Please fill in the form."
-            render :new
+            redirect_to article_path(@article)
+            flash[:notice] = "Please provide a comment."
         end  
     end
     
-
     private
     def comment_params
         params.require(:comment).permit(:commenter, :body)

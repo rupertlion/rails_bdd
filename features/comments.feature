@@ -29,3 +29,11 @@ Feature: Article comments
 
         When I click "Create Comment" button
         And I should see "Please provide a comment."
+
+
+    Scenario: Comment unsuccessfully applied to article due to incorrect email format (sad path)
+
+        When I fill in "Body" with "Love this piece"
+        And I fill in "Commenter" with "goodstuff@gmail"
+        And I click "Create Comment" button 
+        And I should see "Please provide a comment."

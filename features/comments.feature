@@ -13,15 +13,15 @@ Feature: Article comments
 
     Scenario: Comment successfully applied to article with corresponding email (happy path)
 
-        When I fill in "Body" with "Love this piece"
-        And I fill in "Commenter" with "goodstuff@gmail.com"
+        When I fill in "Views" with "Love this piece"
+        And I fill in "Email" with "goodstuff@gmail.com"
         And I click "Create Comment" button 
         And I should see "Love this piece"
         And I should see "goodstuff@gmail.com"
 
     Scenario: Comment successfully applied to article without corresponding email (happy path)
 
-        When I fill in "Body" with "Love this piece"
+        When I fill in "Views" with "Love this piece"
         And I click "Create Comment" button 
         And I should see "Love this piece"
 
@@ -33,7 +33,7 @@ Feature: Article comments
 
     Scenario: Comment unsuccessfully applied to article due to incorrect email format (sad path)
 
-        When I fill in "Body" with "Love this piece"
-        And I fill in "Commenter" with "goodstuff@gmail"
+        When I fill in "Views" with "Love this piece"
+        And I fill in "Email" with "goodstuff@gmail"
         And I click "Create Comment" button 
         And I should see "Please provide a comment."

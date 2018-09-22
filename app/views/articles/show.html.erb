@@ -5,23 +5,23 @@
 <% @article.comments.each do |comment| %>
     <p>
         <strong>Comment:</strong>
-        <%= comment.body %>
+        <%= comment.views %>
     </p>
     <p>
         <strong>Email:</strong>
-        <%= comment.commenter %>
+        <%= comment.email %>
     </p>
 <% end %>
 
 <h2>Add a comment:</h2>
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
     <p>
-        <%= form.label :body %><br>
-        <%= form.text_area :body %>
+        <%= form.label :views %><br>
+        <%= form.text_area :views %>
     </p>
     <p>
-        <%= form.label :commenter %><br>
-        <%= form.text_field :commenter %>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %>
     </p>
     <p>
         <%= form.submit %>

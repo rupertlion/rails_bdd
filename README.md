@@ -1,24 +1,65 @@
-# README
+## **Rails AUT - Articles**
+### *Week 4 Lab*
+-------
+### Prerequisites
+-------
+Installed gems:
+* Launchy
+* Shoulda-matchers
+* Factory bot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Built With
+-------
 
-* Ruby version
+* [ERB](https://apidock.com/ruby/ERB) - Markup language
+* [Ruby](https://www.ruby-lang.org/en/) - Programming language
+* [Rails](https://rubyonrails.org/) - Server-side web application framework
 
-* System dependencies
 
-* Configuration
+### **Overview**
+-------
+The purpose of this lab is to create an article repository / blog, and be able to create, edit and comment on the articles.
 
-* Database creation
 
-* Database initialization
+### **User Stories**
+-------
+#### The article site is working with the following associated user stories:
 
-* How to run the test suite
+* **CREATE ARTICLES:** 
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```
+  As a publisher
+  In order to add relevant content to my news service
+  I would like to be able to create articles
+  ```
 
-* Deployment instructions
+* **EDIT ARTICLES:** 
 
-* ...
+  ```
+    As a publisher
+    In order to keep my content accurate
+    I would like to be able to edit my articles
+  ```
+  
+* **LIST ARTICLES:** 
+
+  ```
+  As a visitor,
+  When I visit the landing page of the application
+  I would like to see a list of all articles
+  ```
+
+* **COMMENT ON ARTICLES:** 
+
+  ```
+   As a user
+   In order to have my opinion heard
+   I would like to be able to add comments to a specific article
+  ```
+  
+
+### **Authors**
+-------
+* **Rupert Lion** 
+* **Daniel Malmgren de Oliveira** 
